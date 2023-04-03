@@ -1,0 +1,42 @@
+docker pull <cont> - скачать obraz
+docker images - pokazat ska4enie lokalno obrazi
+docker run <> - ska4at i zapustit konteyner
+docker run \ - razbitiay kommand na stroki
+> --name <my name> \
+> -d \ - zapusk v background
+> <conteyner>
+
+docker start <> - zapustit ostanovleniy konteyner
+docker stop <conteiner> - ostanovit konteiner
+docker kill <conteiner> - ostanovit konteiner esli stop ne rabotaet
+docker rm <container id or NAMES> - udalit conteiner
+docker run --rm <conteyner> - avtomati4eskoe udalenie conteynera posle ego zaverchenia
+docker container prune - udalit vse ostanovlenie konteyneri
+docker logs <conteiner> - log conteynera (ego vivod)
+
+docker container inspect <conteiner> - meta dannie konteinera
+docker container inspect <conteiner> | grep <text> - otfiltrovat po opredelennomu textu
+
+docker exec -it <konteiner> bash - zapusk processa (bash) v zapuchenom conteynere
+docker run --name <imia> <conteiner> - zadat imia dla conteynera
+
+docker run -p 8080:80 <conteiner> - probroska porta 8080 vnechniy, 80 vnutreniy
+
+docker run -v <adress>:<adress v conteynere> <conteyner>
+docker run -v ${PWD}:/usr/share/nginx/html nginx
+${PWD} - peremennaya, absolutniy put k tekuchey papke
+
+docker build . - sozdat image iz tekuchey direktorii
+docker build . -t <my image name>:<my tag> - dobavit imia i tag (opcionalno)
+docker build --tag <my image tag> . - dobavit tolko tag (alpine, latest ...)
+
+docker-compose up - zapusk compose
+docker-compose up -d - zapusk v background
+
+
+
+
+
+Dockerfile
+docker-compose.yml
+

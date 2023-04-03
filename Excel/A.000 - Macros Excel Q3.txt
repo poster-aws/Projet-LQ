@@ -1,0 +1,38 @@
+Sub Macro2()
+'
+' Macro2 Macro
+'
+' Touche de raccourci du clavier: Ctrl+w
+'
+
+a = 1
+b = 1
+
+c = 1
+d = 1
+
+    Cells.Select
+    Selection.NumberFormat = "@"
+
+Do While a < 1000
+
+Cells(b, 5).Value = Cells(a, 1).Value
+
+Cells(d, 6).Value = Cells(c, 2).Value
+Cells(d, 7).Value = Cells(c + 1, 2).Value
+Cells(d, 8).Value = Cells(c + 2, 2).Value
+
+
+a = a + 3
+b = b + 1
+c = c + 3
+d = d + 1
+
+Loop
+
+    Columns("A:D").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("D1").Select
+
+
+End Sub
