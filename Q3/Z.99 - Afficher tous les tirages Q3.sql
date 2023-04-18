@@ -4,7 +4,7 @@
    DECLARE @comb char(3)
  --DECLARE @BEGINDATE DATE
  --DECLARE @ENDDATE DATE
-    SET @comb=781
+    SET @comb=222
                                 --yyyy-mm-dd
   --SET @BEGINDATE = CONVERT(DATE, '2022-09-13')
   --SET @ENDDATE = CONVERT(DATE, '2021-02-15')

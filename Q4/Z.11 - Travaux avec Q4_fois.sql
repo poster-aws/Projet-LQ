@@ -4,7 +4,7 @@
 
 DECLARE @comb char(4)
 
-set @comb=3402
+set @comb=5192
 
 --SELECT * from Q4_fois where n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 1) and n3 = SUBSTRING(@comb, 3, 1) and n4 = SUBSTRING(@comb, 4, 1)
 
@@ -13,6 +13,7 @@ set @comb=3402
 --SELECT count (fois) from Q4_fois where fois=0 and cons='1-2-3'
 --SELECT count (fois) from Q4_fois where fois=0 and cons=''
 
-SELECT * from Q4_fois where fois=0 and cons='1-2-3'
+SELECT * from Q4_fois --where fois=0 --and 
+--WHERE cons<>'1-2-3'
 
---ORDER BY fois ASC 
+ORDER BY dern desc

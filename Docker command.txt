@@ -6,7 +6,7 @@ docker run \ - razbitiay kommand na stroki
 > -d \ - zapusk v background
 > <conteyner>
 
-docker start <> - zapustit ostanovleniy konteyner
+docker start <conteiner> - zapustit ostanovleniy konteyner
 docker stop <conteiner> - ostanovit konteiner
 docker kill <conteiner> - ostanovit konteiner esli stop ne rabotaet
 docker rm <container id or NAMES> - udalit conteiner
@@ -29,6 +29,11 @@ ${PWD} - peremennaya, absolutniy put k tekuchey papke
 docker build . - sozdat image iz tekuchey direktorii
 docker build . -t <my image name>:<my tag> - dobavit imia i tag (opcionalno)
 docker build --tag <my image tag> . - dobavit tolko tag (alpine, latest ...)
+docker tag <Image name>:<tag> <new Image name>:<new tag> - pereimenovat image
+docker rmi <IMAGE ID> -f - udalit image
+
+docker login - podklu4enie k DockerHub
+docker push <image name>:<tag> - zalit image na DockerHub image name = repozitory/nameimage
 
 docker-compose up - zapusk compose
 docker-compose up -d - zapusk v background
