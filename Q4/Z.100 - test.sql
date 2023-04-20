@@ -42,6 +42,7 @@ END
 DELETE FROM Q4_result WHERE somme=0
 
 select * from Q4_result 
+--where n1 in (4,3,1,0) and n2 in (4,3,1,0) and n3 in (4,3,1,0) and n4 in (4,3,1,0) 
  -- WHERE (n1=4 or n2=4 or n3=4 or n4=4) --and n1<>3 and n2<>3 and n3<>3 and n4<>3
 
 ORDER BY somme DESC

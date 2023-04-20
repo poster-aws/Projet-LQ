@@ -33,6 +33,7 @@ SET @n1 = 0
  -------------------------------------------------------
   SELECT MAX (fois) as 'MAX', MIN(fois) as 'MIN' FROM Q2_anal 
   Select * FROM Q2_anal --WHERE jp>=maxim-20
+  
   Order by jp DESC
 
   --SELECT SUM (fois) FROM Q2_anal 

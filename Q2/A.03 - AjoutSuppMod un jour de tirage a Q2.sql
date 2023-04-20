@@ -5,8 +5,8 @@ USE quotidienne
  DECLARE @ADDDATE DATE
  DECLARE @comb char(2)
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2023-03-18')
-  SET @comb=72
+  SET @ADDDATE = CONVERT(DATE, '2023-04-19')
+  SET @comb=61
 
 INSERT INTO Q2 VALUES (@ADDDATE, SUBSTRING(@comb, 1, 1), SUBSTRING(@comb, 2, 1))
 

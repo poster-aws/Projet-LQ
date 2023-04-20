@@ -6,8 +6,8 @@ USE quotidienne4
  DECLARE @comb char(4)
 
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2023-04-17')
-  set @comb=5192
+  SET @ADDDATE = CONVERT(DATE, '2023-04-19')
+  set @comb=2608
 
  INSERT INTO Q4 VALUES (@ADDDATE, SUBSTRING(@comb, 1, 1), SUBSTRING(@comb, 2, 1), SUBSTRING(@comb, 3, 1), SUBSTRING(@comb, 4, 1))
 
