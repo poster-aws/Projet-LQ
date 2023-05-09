@@ -31,7 +31,7 @@ SET @n1 = 0
    END;
 
  -------------------------------------------------------
-  SELECT MAX (fois) as 'MAX', MIN(fois) as 'MIN' FROM Q2_anal 
+  SELECT MAX (fois) as 'MAX fois', MIN(fois) as 'MIN fois' FROM Q2_anal 
   Select * FROM Q2_anal --WHERE jp>=maxim-20
   
   Order by jp DESC

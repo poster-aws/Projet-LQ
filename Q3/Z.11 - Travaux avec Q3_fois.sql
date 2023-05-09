@@ -4,11 +4,12 @@ USE quotidienne3
 
 DECLARE @comb char(3)
 
-set @comb=822
+set @comb=772
 
 --SELECT * from Q3_fois where n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 1) and n3 = SUBSTRING(@comb, 3, 1)
 
-SELECT * from Q3_fois where fois =8
+SELECT * from Q3_fois --where fois =8
 --WHERE n1 in (1,2,3) and n2 in (1,2,3) and n3 in (1,2,3)-- and cons='****'
 
-ORDER BY dern ASC  
+ORDER BY dern ASC
+--ORDER BY fois DESC  

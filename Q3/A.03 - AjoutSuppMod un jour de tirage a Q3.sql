@@ -5,8 +5,8 @@ USE quotidienne3
  DECLARE @ADDDATE DATE
  DECLARE @comb char(3)
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2023-03-19')
-  set @comb=823
+  SET @ADDDATE = CONVERT(DATE, '2023-04-23')
+  set @comb=270
 
  INSERT INTO Q3 VALUES (@ADDDATE, SUBSTRING(@comb, 1, 1), SUBSTRING(@comb, 2, 1), SUBSTRING(@comb, 3, 1))
 

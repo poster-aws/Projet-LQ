@@ -9,7 +9,7 @@ DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
                               --yyyy-mm-dd
 SET @BEGINDATE = CONVERT(DATE, '1983-06-06') -- Debut
-SET @ENDDATE =   CONVERT(DATE, '2023-04-20') --Aujourd'hui
+SET @ENDDATE =   CONVERT(DATE, '2023-04-30') --Aujourd'hui
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN
@@ -26,3 +26,7 @@ SET @ENDDATE =   CONVERT(DATE, '2023-04-20') --Aujourd'hui
    SELECT * FROM Q3_tmp
    
    DROP TABLE Q3_tmp
+
+   PRINT '************'
+   PRINT '****Done****'
+   PRINT '************'
