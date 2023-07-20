@@ -1,7 +1,7 @@
 Use quotidienne4
 
 TRUNCATE TABLE Q4_fois
--- CREATE TABLE Q4_fois (n1 int, n2 int, n3 int, n4 int, fois int, dern date, cons varchar(5)))
+-- CREATE TABLE Q4_fois (n1 int, n2 int, n3 int, n4 int, fois int, tirage date, cons varchar(5)))
 
 DECLARE @n1 int
 DECLARE @n2 int

@@ -32,7 +32,7 @@ SET @n1 = 0
 
  -------------------------------------------------------
   SELECT MAX (fois) as 'MAX fois', MIN(fois) as 'MIN fois' FROM Q2_anal 
-  Select * FROM Q2_anal --WHERE jp>=maxim-20
+  Select * FROM Q2_anal --WHERE n1=3 or n2=3--jp>=maxim-20
   
   Order by jp DESC
 
