@@ -20,4 +20,4 @@ SELECT * FROM Q3_copy
 */
 
 SELECT * FROM Q3_copy
-ORDER BY tirage DESC
+--ORDER BY tirage DESC

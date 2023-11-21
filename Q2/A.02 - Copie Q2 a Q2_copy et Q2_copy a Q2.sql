@@ -21,4 +21,5 @@ SELECT * FROM Q2_copy
 
 */
 
---SELECT * FROM Q2_copy
+SELECT * FROM Q2_copy
+ORDER BY tirage DESC

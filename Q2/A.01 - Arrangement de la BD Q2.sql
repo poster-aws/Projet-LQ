@@ -9,9 +9,9 @@ use quotidienne
 
 DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
-
+                              --AAAA-MM-JJ
 SET @BEGINDATE = CONVERT(DATE, '2016-05-19') -- Debut
-SET @ENDDATE =  CONVERT(DATE, '2023-07-12') --Aujourd'hui
+SET @ENDDATE =   CONVERT(DATE, '2023-12-31') --Aujourd'hui
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN

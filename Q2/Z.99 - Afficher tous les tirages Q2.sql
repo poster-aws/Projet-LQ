@@ -15,5 +15,6 @@ select * from quotidienne.dbo.Q2
  -- WHERE Tirage>=@BEGINDATE and Tirage<=@ENDDATE and n1=n2
 
 --where n1=n2
+
+--ORDER BY Tirage DESC  -- les plus recentes au debut
 --ORDER BY Tirage ASC
-ORDER BY Tirage DESC  -- les plus recentes au debut

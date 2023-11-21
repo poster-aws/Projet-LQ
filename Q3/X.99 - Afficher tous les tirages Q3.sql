@@ -10,9 +10,9 @@
   SET @BEGINDATE = CONVERT(DATE, '2022-09-13')
   SET @ENDDATE =   CONVERT(DATE, '2021-02-15')
   
-  SELECT @comb='063'
+  SELECT @comb='902'
 
---SELECT * FROM Q3
+SELECT * FROM Q3
 --SELECT * from Q3 where n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 1) and n3 = SUBSTRING(@comb, 3, 1)
 
 -- ********************************* Q3_fois *********************************
@@ -30,8 +30,8 @@ and (n1=4 or n2=4 or n3=4)
 SELECT * from Q3_fois
 WHERE n1 in (1,2,3) and n2 in (1,2,3) and n3 in (1,2,3) and cons='****'
 */
-SELECT * FROM Q3_fois-- WHERE n1=n2 and n2=n3
+--SELECT * FROM Q3_fois-- WHERE n1=n2 and n2=n3
 
 
-ORDER BY dern DESC  -- les plus recentes au debut 
+ORDER BY Tirage DESC  -- les plus recentes au debut 
 --ORDER BY Tirage ASC --les plus ancien au debut

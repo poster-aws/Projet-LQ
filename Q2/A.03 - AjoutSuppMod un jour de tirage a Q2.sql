@@ -6,10 +6,11 @@ USE quotidienne
  DECLARE @ADDDATE2 DATE
  DECLARE @comb varchar(2)
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2023-07-02')
+  SET @ADDDATE = CONVERT(DATE, '2023-11-12')
+  SELECT @comb = '84'
+  
   SET @ADDDATE2 = CONVERT(DATE, '2023-07-01')
-  SELECT @comb = '26'
-
+  
 --INSERT INTO quotidienne.dbo.Q2 VALUES (@ADDDATE, SUBSTRING(@comb, 1, 1), SUBSTRING(@comb, 2, 1))
 
 --DELETE FROM Q2 WHERE Tirage = @ADDDATE --and n1=SUBSTRING(@comb, 1, 1) and n2=SUBSTRING(@comb, 2, 1)
@@ -17,12 +18,14 @@ USE quotidienne
 
 --UPDATE Q2 SET Tirage = @ADDDATE WHERE  n1=2 and n2=6 and Tirage = @ADDDATE2  
 
-select * from quotidienne.dbo.Q2
+--select * from quotidienne.dbo.Q2
 
  -- WHERE Tirage>=@BEGINDATE and Tirage<=@ENDDATE and n1=n2
 
 --WHERE n1=n2
 --ORDER BY Tirage ASC
-ORDER BY Tirage DESC  -- les plus recentes au debut
+--ORDER BY Tirage DESC  -- les plus recentes au debut
 
+PRINT @ADDDATE
+PRINT @comb
 PRINT LEN(@comb)
