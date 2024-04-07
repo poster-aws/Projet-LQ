@@ -8,7 +8,6 @@ DECLARE @n2 int
 DECLARE @n3 int
 DECLARE @n4 int
 
-
     SET @n1=0
     WHILE @n1<10
 	BEGIN

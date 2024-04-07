@@ -19,8 +19,8 @@ INSERT INTO #dern
 SELECT TOP (@TOP) n1, n2, n3, fois, dern FROM Q3_fois
 ORDER BY dern ASC
 
-SELECT #fois.n1, #fois.n2, #fois.n3, #fois.fois, #fois.dern FROM #fois INNER JOIN #dern
-ON #fois.n1=#dern.n1 and #fois.n2=#dern.n2 and #fois.n3=#dern.n3
+SELECT #fois.n1, #fois.n2, #fois.n3, #fois.fois, #fois.dern FROM #fois 
+INNER JOIN #dern ON #fois.n1=#dern.n1 and #fois.n2=#dern.n2 and #fois.n3=#dern.n3
 --ORDER BY #fois.fois ASC
 
 

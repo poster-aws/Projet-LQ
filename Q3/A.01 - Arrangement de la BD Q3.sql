@@ -1,4 +1,4 @@
-/*  Arrangement Q3  */
+--** Arrangement Q3 **
 
 use quotidienne3
 
@@ -8,19 +8,19 @@ use quotidienne3
 DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
                               --yyyy-mm-dd
-SET @BEGINDATE = CONVERT(DATE, '1983-06-06') -- Debut
-SET @ENDDATE =   CONVERT(DATE, '2023-12-31') --Aujourd'hui
+SET @BEGINDATE = CONVERT(DATE, '1983-06-06') -- Debut pour Q3 et Q4 1983-06-06
+SET @ENDDATE =   CONVERT(DATE, '2024-03-31') -- Aujourd'hui +
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN
+
      INSERT INTO Q3_tmp (Tirage, n1, n2, n3)
      SELECT * FROM (Select * from Q3 Where Tirage = @BEGINDATE) as qq
 
     SET @BEGINDATE = DATEADD(DAY, +1, @BEGINDATE)
    END
 
-   DROP TABLE Q3
-   CREATE TABLE Q3 ( Tirage DATE, n1 INT, n2 INT, n3 INT)
+   TRUNCATE TABLE Q3
 
    INSERT INTO Q3(Tirage, n1, n2, n3)
    SELECT * FROM Q3_tmp
@@ -28,5 +28,6 @@ SET @ENDDATE =   CONVERT(DATE, '2023-12-31') --Aujourd'hui
    DROP TABLE Q3_tmp
 
    PRINT '************'
-   PRINT '****Done****'
+   SELECT TOP(1) * FROM Q3
    PRINT '************'
+   PRINT '****Done****'

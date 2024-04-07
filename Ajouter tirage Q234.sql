@@ -12,10 +12,10 @@ USE quotidienne4
   DECLARE @n3 int
   DECLARE @count int
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2023-11-20')
-    SELECT @comb2='71'
-   SELECT @comb3='638'
-  SELECT @comb4='1043'
+  SET @ADDDATE = CONVERT(DATE, '2024-04-04')
+    SELECT @comb2='96'
+   SELECT @comb3='858'
+  SELECT @comb4='4984'
 
 SET @n1 = SUBSTRING(@comb3, 1, 1)
 SET @n2 = SUBSTRING(@comb3, 2, 1)
@@ -42,4 +42,4 @@ SELECT TOP(1) * FROM quotidienne3.dbo.Q3 ORDER BY Tirage DESC
 SELECT TOP(1) * FROM quotidienne4.dbo.Q4 ORDER BY Tirage DESC
 PRINT '*******************************'
 
-SELECT TOP(1) * FROM quotidienne3.dbo.Q3_result
+SELECT TOP(1) * FROM quotidienne3.dbo.Q3_result ORDER BY Tirage DESC

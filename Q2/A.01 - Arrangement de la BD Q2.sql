@@ -1,6 +1,4 @@
---
 -- ** Arrangement Q2 **
---
 
 use quotidienne
 
@@ -10,8 +8,8 @@ use quotidienne
 DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
                               --AAAA-MM-JJ
-SET @BEGINDATE = CONVERT(DATE, '2016-05-19') -- Debut
-SET @ENDDATE =   CONVERT(DATE, '2023-12-31') --Aujourd'hui
+SET @BEGINDATE = CONVERT(DATE, '2016-05-19') -- Debut pour Q2 2016-05-19
+SET @ENDDATE =   CONVERT(DATE, '2024-03-31') -- Aujourd'hui +
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN
@@ -21,12 +19,15 @@ SET @ENDDATE =   CONVERT(DATE, '2023-12-31') --Aujourd'hui
 
     SET @BEGINDATE = DATEADD(DAY, +1, @BEGINDATE)
    END
-
-   DROP TABLE Q2
-   CREATE TABLE Q2 ( Tirage DATE, n1 INT, n2 INT )
+  
+   TRUNCATE TABLE Q2
 
    INSERT INTO Q2(Tirage, n1, n2) 
    SELECT * FROM Q2_tmp
+   
    DROP TABLE Q2_tmp
 
+   PRINT '************'
    SELECT TOP(1) * FROM Q2
+   PRINT '************'
+   PRINT '****Done****'
