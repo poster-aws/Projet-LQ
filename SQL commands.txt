@@ -1,0 +1,12 @@
+PRINT @comb
+PRINT LEN(@comb)
+--------------------------------------------------------------
+DECLARE @ADDDATE DATE
+SET @ADDDATE = CONVERT(DATE, '2023-12-13')
+--------------------------------------------------------------
+DECLARE @comb varchar(2)
+SELECT @comb = '55'
+n1=SUBSTRING(@comb, 1, 1)
+n2=SUBSTRING(@comb, 2, 1)
+--------------------------------------------------------------
+SET @Date1 = GETDATE ()

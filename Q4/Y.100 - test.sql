@@ -46,4 +46,4 @@ SET @n4 = (SELECT TOP(1) n4 FROM Q4_fois1)
 
 PRINT '++++++'
 --Select * from Q4_fois1
-Select * from #Q4_temp ORDER BY N 
+Select * from quotidienne4.dbo.#Q4_temp ORDER BY N 

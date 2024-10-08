@@ -1,0 +1,42 @@
+USE quotidienne
+
+DECLARE @n1 INT
+DECLARE @n2 INT
+DECLARE @count INT
+DECLARE @c INT
+
+DROP TABLE IF EXISTS TEST1
+DROP TABLE IF EXISTS TEST2
+DROP TABLE IF EXISTS TEST3
+
+CREATE TABLE TEST1 (n1 INT, n2 INT, Tirage DATE)
+CREATE TABLE TEST2 (n1 INT, n2 INT, Tirage DATE)
+CREATE TABLE TEST3 (c INT, n1 INT, n2 INT, Tirage DATE)
+
+--==========
+SET @n1 = 0 
+  WHILE @n1<10
+    BEGIN
+    SET @n2 = 0 
+      WHILE @n2<10
+        BEGIN
+         INSERT INTO TEST1 VALUES (@n1, @n2, (SELECT TOP(1) Tirage FROM Q2 WHERE n1=@n1 and n2=@n2 ORDER BY Tirage DESC))
+      SET @n2 = @n2+1
+      END
+   SET @n1 = @n1+1
+END;
+--========== 
+SET @count = 1
+  WHILE @count < 101
+    BEGIN
+     INSERT INTO TEST2 SELECT TOP (1) * FROM TEST1 Order by Tirage DESC
+     DELETE TOP (1) FROM TEST1 WHERE Tirage IN (Select top (1) Tirage from TEST1 Order by Tirage DESC)
+SET @count = @count+1
+    END;
+
+--INSERT INTO TEST3 SELECT ROW_NUMBER() OVER(ORDER BY Tirage DESC) as ROW, n1, n2, Tirage FROM TEST2 -- Ajout les numeros 1..100 
+
+DROP TABLE TEST1
+
+SELECT * FROM TEST2
+--SELECT * FROM TEST3

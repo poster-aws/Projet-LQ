@@ -1,5 +1,4 @@
 -- ** Arrangement Q2 **
-
 use quotidienne
 
   DROP TABLE IF EXISTS Q2_tmp
@@ -9,7 +8,7 @@ DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
                               --AAAA-MM-JJ
 SET @BEGINDATE = CONVERT(DATE, '2016-05-19') -- Debut pour Q2 2016-05-19
-SET @ENDDATE =   CONVERT(DATE, '2024-03-31') -- Aujourd'hui +
+SET @ENDDATE =   CONVERT(DATE, '2024-06-11') -- Aujourd'hui +
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN

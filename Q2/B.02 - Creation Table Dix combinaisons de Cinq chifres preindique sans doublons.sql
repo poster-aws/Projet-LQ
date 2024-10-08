@@ -1,6 +1,5 @@
 -- ** Creer la table avec des combinaisons des deux chifres preindique sans doublons **
-
-use quotidienne
+USE quotidienne
 
   DROP TABLE IF EXISTS Q2_comb;
   CREATE TABLE Q2_comb (n1 char (2) NOT NULL, n2 char (2) NOT NULL)
@@ -14,12 +13,11 @@ DECLARE @n5 char (1)
 DECLARE @n_1 char (2)
 DECLARE @n_2 char (2)
 
-SET @n1 = 2
-SET @n2 = 4
-SET @n3 = 6
-SET @n4 = 9
-SET @n5 = 0
-
+SET @n1 = 1
+SET @n2 = 2
+SET @n3 = 3
+SET @n4 = 4
+SET @n5 = 5
 
 SET @n_1 = 0
 WHILE @n_1<=9
@@ -43,11 +41,9 @@ SET @n1 = 0
 		 BEGIN
 		  DELETE FROM Q2_comb 
 		  WHERE n1!=@n1 and n2!=@n2 and n2<n1
-
-		 SET @n2 = @n2 + 1
-		 END
-		 
-	SET @n1 = @n1+1
+		SET @n2 = @n2 + 1
+		 END	 
+SET @n1 = @n1+1
 	END
 
 Select * FROM Q2_comb

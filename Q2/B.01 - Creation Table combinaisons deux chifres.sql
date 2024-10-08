@@ -1,6 +1,5 @@
 -- ** Creer la table avec les combinaisons des deux chifres **
-
-use quotidienne
+USE quotidienne
 
   DROP TABLE IF EXISTS Q2_comb;
   CREATE TABLE Q2_comb (n1 char (1) NOT NULL, n2 char (1) NOT NULL)
@@ -21,7 +20,6 @@ SET @n1 = 0
   SET @n1 = @n1+1
    END; 
 ------------ Dans n'emport quel order ----------------
-
 SET @n1 = 0
  
    WHILE @n1<10
@@ -37,6 +35,5 @@ SET @n1 = 0
 		 
 	SET @n1 = @n1+1
 	END;
-  
  ------------------------------------------------------- 
-  Select * FROM Q2_comb
+  SELECT * FROM Q2_comb

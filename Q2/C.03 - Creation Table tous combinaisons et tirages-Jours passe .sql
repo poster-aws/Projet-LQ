@@ -1,5 +1,4 @@
  -- ** TEMP Table  **
-
 USE quotidienne
 
 DECLARE @Date1 DATE
@@ -34,7 +33,6 @@ BEGIN
 SET @row = (SELECT COUNT (*) from Q2 where (n1=@n1 and n2=@n2)) --or (n1=@n2  and n2=@n1))
 SET @row1 = 1
 SET @row2 = 2
-
 
  WHILE @row2!=@row+1
   BEGIN
