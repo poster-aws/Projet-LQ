@@ -3,7 +3,7 @@ USE quotidienne3
 USE quotidienne4
 
 DECLARE @TOP int
-SET @TOP=50
+SET @TOP=500
 SELECT TOP(@TOP) * FROM quotidienne.dbo.Q2 ORDER BY Tirage DESC
 --SELECT TOP(@TOP) * FROM quotidienne3.dbo.Q3 ORDER BY Tirage DESC
 --SELECT TOP(@TOP) * FROM quotidienne4.dbo.Q4 ORDER BY Tirage DESC
