@@ -9,7 +9,7 @@ DECLARE @BEGINDATE DATE
 DECLARE @ENDDATE DATE
                               --yyyy-mm-dd
 SET @BEGINDATE = CONVERT(DATE, '1983-06-06') -- Debut pour Q3 et Q4 1983-06-06
-SET @ENDDATE =   CONVERT(DATE, '2024-06-11') -- Aujourd'hui +
+SET @ENDDATE =   CONVERT(DATE, '2025-01-30') -- Aujourd'hui +
 
   WHILE (@BEGINDATE != DATEADD(DAY, +1, @ENDDATE))
    BEGIN

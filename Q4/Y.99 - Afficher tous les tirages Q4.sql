@@ -13,8 +13,9 @@
  
   SELECT @comb='1356'
 
+SELECT * FROM Q4
 --SELECT * FROM Q4_fois
-SELECT * FROM Q4 WHERE n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 1) and n3 = SUBSTRING(@comb, 3, 1) and n4 = SUBSTRING(@comb, 4, 1)
+--SELECT * FROM Q4 WHERE n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 1) and n3 = SUBSTRING(@comb, 3, 1) and n4 = SUBSTRING(@comb, 4, 1)
 
 -- ********************************* Q3_fois *********************************
 
@@ -30,7 +31,7 @@ SELECT * FROM Q4 WHERE n1 = SUBSTRING(@comb, 1, 1) and n2 = SUBSTRING(@comb, 2, 
                        and (n4 in (1,2,3,4) and n4<>n1 and n4<>n2 and n4<>n3) */
           
 
-ORDER BY tirage DESC  -- les plus recentes au debut 
+--ORDER BY tirage DESC  -- les plus recentes au debut 
 --ORDER BY Tirage ASC --les plus ancien au debut
 
 --SELECT count (fois) as '1-2-3' from Q4_fois where fois=0 and cons='1-2-3'
