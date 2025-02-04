@@ -14,5 +14,5 @@ SELECT * FROM Q2
 --WHERE Tirage>=@BEGINDATE and Tirage<=@ENDDATE --and n1=n2
 --where n1=1 and n2=3 or n1=2 and n2=9
 
---ORDER BY Tirage DESC  -- les plus recentes au debut
+ORDER BY Tirage DESC  -- les plus recentes au debut
 --ORDER BY Tirage ASC
