@@ -12,10 +12,10 @@ USE quotidienne4
   DECLARE @n3 int
   DECLARE @count int
                               --YYYY-MM-DD
-  SET @ADDDATE = CONVERT(DATE, '2025-02-24')
-    SELECT @comb2='87'
-   SELECT @comb3='544'
-  SELECT @comb4='1965'
+  SET @ADDDATE = CONVERT(DATE, '2025-03-10')
+    SELECT @comb2='41'
+   SELECT @comb3='238'
+  SELECT @comb4='1514'
 
 SET @n1 = SUBSTRING(@comb3, 1, 1)
 SET @n2 = SUBSTRING(@comb3, 2, 1)
